@@ -1,9 +1,8 @@
 <template>
-  <v-app>
+  <v-app style="background:#c5eff7;">
+    <div >
     <v-main>
-      <v-container>
         <Nuxt />
-      </v-container>
     </v-main>
     <v-footer
      color="#c5eff7"
@@ -16,6 +15,7 @@
           {{ new Date().getFullYear() }} — <strong>Bluwm</strong>
         </v-col>
     </v-footer>
+    </div>
   </v-app>
 </template>
 

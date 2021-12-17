@@ -1,9 +1,12 @@
 <template>
-<v-row>
-  <v-col>
-
-  </v-col>
-</v-row>
+<div>
+<home-hero/>
+<home-contents/>
+<home-function/>
+<home-flow/>
+<home-demo/>
+<home-form/>
+</div>
 </template>
 
 <script>
