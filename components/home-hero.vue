@@ -1,9 +1,4 @@
 <template>
-<v-lazy
-            transition="fade-transition"
-            :options="{
-                threshould: .5}"
-            >
 <v-parallax src="/hero.jpg" height="600">
     <v-row align='center' justify="center">
         <v-col
@@ -17,5 +12,4 @@
         </v-col>
         </v-row>
 </v-parallax>
-</v-lazy>
 </template>
