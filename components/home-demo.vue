@@ -3,6 +3,11 @@
     <h2>Demo</h2>
       <v-row>
         <v-col>
+            <v-lazy
+            transition="fade-transition"
+            :options="{
+                threshould: .5}"
+            >
                 <v-card
                 height="auto"
                 class="rounded-xl pa-2"
@@ -21,6 +26,7 @@
                 
                
                 </v-card>
+            </v-lazy>
         </v-col>
     </v-row>
 </v-container>

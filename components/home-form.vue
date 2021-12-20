@@ -3,6 +3,11 @@
     <h2>Inquiries</h2>
     <v-row>
         <v-col>
+            <v-lazy
+            transition="fade-transition"
+            :options="{
+                threshould: .5}"
+            >
               <v-card
             class="rounded-xl pa-6"
             align="center"
@@ -37,6 +42,7 @@
                     </v-btn>
                 </v-form>
             </v-card>
+            </v-lazy>
         </v-col>
     </v-row>
 </v-container>
