@@ -10,6 +10,7 @@ justify='center'
     cols=6
     >
     <v-lazy
+            v-model="isActivate"
             transition="fade-transition"
             :options="{
                 threshould: .5}"
@@ -47,7 +48,8 @@ export default {
                 {title: '結婚式前のリマインド'},
                 {title: 'ご祝儀オンライン決済'},
                 {title: '共有アルバム作成'}
-            ]
+            ],
+            isActivate: false
         }
     }
 }

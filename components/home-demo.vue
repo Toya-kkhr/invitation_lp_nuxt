@@ -4,6 +4,7 @@
       <v-row>
         <v-col>
             <v-lazy
+            v-model="isActivate"
             transition="fade-transition"
             :options="{
                 threshould: .5}"
@@ -31,3 +32,13 @@
     </v-row>
 </v-container>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            isActivate: false
+        }
+    }
+}
+</script>

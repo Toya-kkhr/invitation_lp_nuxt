@@ -10,6 +10,7 @@ xs='1'>
         lg='4'
         >
         <v-lazy
+        v-model="isActive"
          transition="fade-transition"
             :options="{
                 threshould: .5}"
@@ -59,6 +60,7 @@ export default {
                 text: '余興の準備には意外と時間がかかります。<br>その手間を無くしより新しい体験へ！<br><strong>クイズ</strong><br><strong>ムービー</strong><br><strong>ドレスの色当て…</strong><br>活用方法は様々！<br>思いを実現に導きます。'
                 },
             ],
+            isActive: false
             }
         }
 }
