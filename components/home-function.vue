@@ -9,12 +9,6 @@ justify='center'
     :key="i"
     cols=6
     >
-    <v-lazy
-            v-model="isActivate"
-            transition="fade-transition"
-            :options="{
-                threshould: .5}"
-            >
         <v-card
         class="rounded-xl pa-2"
         height="220px"
@@ -31,7 +25,6 @@ justify='center'
             </h4>
             </div>
         </v-card>
-    </v-lazy>
     </v-col>
 </v-row>
 </v-container>

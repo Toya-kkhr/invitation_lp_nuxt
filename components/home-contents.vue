@@ -1,11 +1,12 @@
+/* eslint-disable vue/no-v-html */
 <template>
 <v-container>
     <h2>Service</h2>
    <v-row 
 xs='1'>
         <v-col
-        v-for="contents in contents"
-            :key="contents"
+        v-for="content in contents"
+            :key="content"
         cols='12'
         lg='4'
         >
@@ -21,18 +22,18 @@ xs='1'>
             align='center'
             >
             <img
-            :src="contents.img"
+            :src="content.img"
             width="200px"
             height="200px"
             class="rounded-circle ma-3"
             style="object-fit:cover;"
             />
             <h3>
-            {{contents.title}}  
+            {{content.title}}  
             </h3>
 
                 <template lang="html">
-                    <v-card-text v-html="contents.text">
+                    <v-card-text v-html="content.text">
                     </v-card-text>
                 </template>
             </v-card>
@@ -60,7 +61,6 @@ export default {
                 text: '余興の準備には意外と時間がかかります。<br>その手間を無くしより新しい体験へ！<br><strong>クイズ</strong><br><strong>ムービー</strong><br><strong>ドレスの色当て…</strong><br>活用方法は様々！<br>思いを実現に導きます。'
                 },
             ],
-            isActive: false
             }
         }
 }
