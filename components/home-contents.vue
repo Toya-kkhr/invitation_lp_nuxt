@@ -10,14 +10,8 @@ xs='1'>
         cols='12'
         lg='4'
         >
-        <v-lazy
-        v-model="isActive"
-         transition="fade-transition"
-            :options="{
-                threshould: .5}"
-        >
             <v-card
-            height="auto"
+            height="550px"
             class="rounded-xl"
             align='center'
             >
@@ -37,7 +31,6 @@ xs='1'>
                     </v-card-text>
                 </template>
             </v-card>
-            </v-lazy>
         </v-col>
 </v-row>
 </v-container>
