@@ -1,36 +1,44 @@
 /* eslint-disable vue/no-v-html */
 <template>
-<v-container>
-    <h2>Service</h2>
-   <v-row 
-xs='1'>
+<v-container
+class="text-center"
+>
+
+    <div
+    class="text-h2 ma-10"
+    >
+        Service
+        </div>
+
+   <v-row>
         <v-col
         v-for="content in contents"
-            :key="content"
+        :key="content"
         cols='12'
         lg='4'
         >
-            <v-card
-            height="550px"
-            class="rounded-xl"
-            align='center'
-            >
-            <img
-            :src="content.img"
-            width="200px"
-            height="200px"
-            class="rounded-circle ma-3"
-            style="object-fit:cover;"
-            />
-            <h3>
-            {{content.title}}  
-            </h3>
+        <v-sheet
+        class="rounded-xl pa-4 py-10"
+        align='center'
+        >
+                <v-img
+                :src="content.img"
+                style="border-radius:50%;"
+                width="200px"
+                height="200px"
+                />
+                <div
+                class="pa-4 text-subtitle-1 font-weight-bold"
+                >
+                {{content.title}}  
+                </div>
 
-                <template lang="html">
-                    <v-card-text v-html="content.text">
-                    </v-card-text>
-                </template>
-            </v-card>
+                <div
+                class="px-3"
+                >
+                {{content.text}}
+                </div>
+            </v-sheet>
         </v-col>
 </v-row>
 </v-container>
@@ -43,15 +51,15 @@ export default {
             contents: [
                 {img: '/invitation.jpg',
                 title: '招待状',
-                text: '<strong>会場のマップ</strong><br><strong>参列のお返事</strong><br><strong>ご祝儀のオンライン決済</strong><br><strong>簡単な質問への自動解答</strong><br>全てLINEで完結！<br><br>送った後は、<br><strong>専用ページで出欠状況確認</strong><br><strong>excelでのダウンロード</strong><br>も可能です。',
+                text: '会場のマップ参列のお返事ご祝儀のオンライン決済簡単な質問への自動解答全てLINEで完結！送った後は、専用ページで出欠状況確認excelでのダウンロードも可能です。',
                 },
                 {img: '/reception.jpg',
                 title: '席次表/メニュー',
-                text: 'ゲストに受付で<br><strong>秘密のコード</strong>を渡しましょう。<br>コードをLINEで送ると<br>メニューと席次表がゲストの手元に届きます。'
+                text: 'ゲストに受付で秘密のコードを渡しましょう。コードをLINEで送るとメニューと席次表がゲストの手元に届きます。'
                 },
                 {img: '/entertainment.jpg',
                 title: '余興',
-                text: '余興の準備には意外と時間がかかります。<br>その手間を無くしより新しい体験へ！<br><strong>クイズ</strong><br><strong>ムービー</strong><br><strong>ドレスの色当て…</strong><br>活用方法は様々！<br>思いを実現に導きます。'
+                text: '余興の準備には意外と時間がかかります。その手間を無くしより新しい体験へ！クイズムービードレスの色当て…活用方法は様々！思いを実現に導きます。'
                 },
             ],
             }

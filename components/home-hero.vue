@@ -1,15 +1,18 @@
 <template>
-<v-parallax src="/hero.jpg" height="600">
-    <v-row align='center' justify="center">
-        <v-col
-        cols="12"
-        >
-            <div style="color:#424242; font-size:larger;">
-                <h1>Bluwm<br>
-                <strong>on<span style="color:green;">LINE</span> Paper Item</strong>
-                </h1>
-            </div>
-        </v-col>
-        </v-row>
+<v-parallax 
+src="/hero.jpg" 
+class="pa-9"
+>
+    <h1
+    class="text-h2 text-left font-weight-black"
+    style="color:#707070;"
+    >
+        Bluwm
+        <br>
+        on
+        <span style="color:green;">
+        LINE
+        </span> PaperItem
+    </h1>
 </v-parallax>
 </template>

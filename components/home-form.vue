@@ -1,27 +1,123 @@
 <template>
-<v-container>
-    <h2>Inquiries</h2>
-    <v-row>
-        <v-col>
-              <v-card
+<v-container
+class="text-center"
+>
+    <div
+     class="text-h2 ma-10"
+    >
+        Contact
+        </div>
+
+        <v-sheet
             class="rounded-xl pa-6"
             align="center"
             >
-           <a href="https://lin.ee/eMiWgX2"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" width="40%" border="0"></a>
-           <v-card-text>※こちらはお問合せ専用<br>「公式ライン」です。</v-card-text>
+            <div
+            class="pa-4"
+            >
+           <a href="https://lin.ee/eMiWgX2">
+           <img 
+           src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" 
+           alt="友だち追加" 
+           max-width="150px" 
+           border="0"
+           ></a>
 
-                <!-- <v-divider class="ma-5"></v-divider>
+           <div>
+               ※こちらはお問合せ専用<br>
+               「公式ライン」です。
+            </div>
+            </div>
 
-                 <validation-observer ref="observer" v-slot="{ invalid }" tag="form" @submit.prevent="submit()">
-      <text-field-with-validation v-model="first" rules="required" />
+            <v-divider></v-divider>
 
-      <text-field-with-validation v-model="second" rules="required" />
+            <div
+            class="pa-6"
+            >
+                    <validation-observer
+    ref="observer"
+    v-slot="{ invalid }"
+    >
+        <v-form 
+        name="bluwm"
+        method="post"
+        data-netlify-honeypot="botfield"
+        netlify
+        @click.prevent="submit"
+        >
 
-    <button :disabled="invalid">Submit</button>
-  </validation-observer> -->
-            </v-card>
-        </v-col>
-    </v-row>
+      <v-text-field
+        v-show="false"
+        v-model="title"
+        name="form-name"
+      />
+
+    <validation-provider
+    v-slot="{errors}"
+    name="お名前"
+    rules="required"
+    >
+          <v-text-field
+            v-model="name"
+            type="text"
+            label="name"
+            name="name"
+            :error-messages="errors"
+          />
+    </validation-provider>
+
+    <validation-provider
+        v-slot="{errors}"
+        name="メールアドレス"
+        rules="required|email"
+    >
+          <v-text-field
+            v-model="email"
+            type="email"
+            label="E-mail"
+            name="email"
+            :error-messages="errors"
+          />
+    </validation-provider>
+
+        <validation-provider
+            v-slot="{errors}"
+            name="メッセージ"
+            rules="required"
+        >
+          <v-textarea
+            v-model="contents"
+            label="message"
+            name="message"
+            :error-messages="errors"
+          />
+        </validation-provider>
+
+            <v-text-field
+          v-show="false"
+          v-model="botfield"
+          >
+          </v-text-field>
+
+          <div
+          class="pa-4"
+          >
+          <v-btn
+            :disabled="invalid"
+            type="submit"
+            width="100%"
+            height="50px"
+            class="rounded-pill"
+            color="primary"
+          >
+            送信
+          </v-btn>
+          </div>
+    </v-form>
+    </validation-observer>
+            </div>
+        </v-sheet>
+
 </v-container>
 </template>
 
@@ -32,19 +128,15 @@ export default {
         return{
 
         form: {
+            title:'bluwm',
             name: '',
             email: '',
-            msg: '',
-            first: '',
-            second: ''
+            message: '',
+            botfield: ''
         }
         }
     },
     methods: {
-         submit() {
-            
-        this.$refs.observer.reset()
-        }
     }
 
 

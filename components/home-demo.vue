@@ -1,26 +1,49 @@
 <template>
-<v-container>
-    <h2>Demo</h2>
+<v-container
+class="text-center"
+>
+    <div
+     class="text-h2 ma-10"
+    >
+    Demo
+    </div>
       <v-row>
         <v-col>
-                <v-card
+                <v-sheet
                 height="auto"
-                class="rounded-xl pa-2"
+                class="rounded-xl pa-5"
                 align='center'
                 >
-                 <h3>URL</h3>
-                <v-card-text>
-                    <a href="https://lin.ee/tdmSz8a"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" width="40%" border="0"></a>
-                </v-card-text>
+
+                <div
+                class="pa-4"
+                >
+                    <a href="https://lin.ee/tdmSz8a">
+                    <img 
+                    src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+                     alt="友だち追加"
+                    max-width="150px" 
+                    border="0"
+                    >
+                    </a>
+                </div>
+
                 <v-divider></v-divider>
-                <h3>QR</h3>
-                <v-img src="https://qr-official.line.me/sid/M/336bwogm.png"
-                width="50%"
+
+                <div
+                class="pa-4 text-subtitle-1 font-weight-bold"
+                >
+                    QR
+                </div>
+
+                <v-img 
+                src="https://qr-official.line.me/sid/M/336bwogm.png"
+                max-width="200px"
                 >
                 </v-img>
                 
                
-                </v-card>
+                </v-sheet>
         </v-col>
     </v-row>
 </v-container>
