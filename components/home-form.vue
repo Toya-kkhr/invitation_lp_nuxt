@@ -34,7 +34,7 @@ class="text-center"
             <div
             class="pa-6"
             >
-                    <validation-observer
+      <validation-observer
     ref="observer"
     v-slot="{ invalid }"
     >
@@ -43,6 +43,7 @@ class="text-center"
         method="post"
         data-netlify-honeypot="botfield"
         netlify
+        @click.prevent="submit"
         >
 
       <v-text-field
