@@ -126,14 +126,11 @@ export default {
     
     data() {
         return{
-
-        form: {
             title:'contact',
             name: '',
             email: '',
             message: '',
             botfield: ''
-        }
         }
     },
     methods: {
