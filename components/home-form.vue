@@ -43,7 +43,6 @@ class="text-center"
         method="post"
         data-netlify-honeypot="botfield"
         netlify
-        @click.prevent="submit"
         >
 
       <v-text-field
