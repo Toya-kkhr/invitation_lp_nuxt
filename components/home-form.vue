@@ -34,10 +34,7 @@ class="text-center"
             <div
             class="pa-6"
             >
-
-                        </div>
-        </v-sheet>
-      <validation-observer
+                  <validation-observer
     ref="observer"
     v-slot="{ invalid }"
     >
@@ -119,6 +116,10 @@ class="text-center"
     </v-form>
     </validation-observer>
 
+        </div>
+        </v-sheet>
+
+
 
 </v-container>
 </template>
@@ -136,6 +137,9 @@ export default {
         }
     },
     methods: {
+        submit() {
+            
+        }
     }
 
 
