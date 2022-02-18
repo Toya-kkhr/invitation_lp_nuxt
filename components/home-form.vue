@@ -39,7 +39,7 @@ class="text-center"
     v-slot="{ invalid }"
     >
         <v-form 
-        name="bluwm"
+        name="form1"
         method="post"
         data-netlify-honeypot="botfield"
         netlify
@@ -128,7 +128,7 @@ export default {
         return{
 
         form: {
-            title:'bluwm',
+            title:'form1',
             name: '',
             email: '',
             message: '',
