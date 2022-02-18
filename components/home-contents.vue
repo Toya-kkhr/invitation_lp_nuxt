@@ -12,8 +12,8 @@ class="text-center"
 
    <v-row>
         <v-col
-        v-for="content in contents"
-        :key="content"
+        v-for="(content,i) in contents"
+        :key="i"
         cols='12'
         lg='4'
         >
