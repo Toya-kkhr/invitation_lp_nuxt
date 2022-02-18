@@ -125,12 +125,12 @@ class="text-center"
 export default {
     
     data() {
-        return{
-            title:'contact',
-            name: '',
-            email: '',
-            message: '',
-            botfield: ''
+       return {
+            title: "contact",
+            name: "",
+            email: "",
+            message: "",
+            botfield: ""
         }
     },
     methods: {
