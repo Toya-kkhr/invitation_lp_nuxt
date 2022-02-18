@@ -124,7 +124,7 @@ class="text-center"
     <label>Name <input type="text" name="name" /></label>
   </p>
   <p>
-    <label>Email <input type="email" name="email" /></label>
+    <label>Email <input type="email" name="message" /></label>
   </p>
   <p>
     <button type="submit">Send</button>
