@@ -1,6 +1,6 @@
 <template>
 <v-parallax 
-src="/hero.jpg" 
+src="/hero.png" 
 class="pa-9"
 >
     <h1

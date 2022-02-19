@@ -23,6 +23,7 @@ class="text-center"
         >
                 <v-img
                 :src="content.img"
+                :lazy-src="content.lazy"
                 style="border-radius:50%;"
                 width="200px"
                 height="200px"
@@ -49,15 +50,18 @@ export default {
     data() {
         return{
             contents: [
-                {img: '/invitation.jpg',
+                {img: '/invitation.png',
+                lazy: '/invitation-lazy.png',
                 title: '招待状',
                 text: '会場のマップ参列のお返事ご祝儀のオンライン決済簡単な質問への自動解答全てLINEで完結！送った後は、専用ページで出欠状況確認excelでのダウンロードも可能です。',
                 },
-                {img: '/reception.jpg',
+                {img: '/reception.png',
+                lazy: '/reception-lazy.png',
                 title: '席次表/メニュー',
                 text: 'ゲストに受付で秘密のコードを渡しましょう。コードをLINEで送るとメニューと席次表がゲストの手元に届きます。'
                 },
-                {img: '/entertainment.jpg',
+                {img: '/entertainment.png',
+                lazy: 'entertainment-lazy.png',
                 title: '余興',
                 text: '余興の準備には意外と時間がかかります。その手間を無くしより新しい体験へ！クイズムービードレスの色当て…活用方法は様々！思いを実現に導きます。'
                 },
