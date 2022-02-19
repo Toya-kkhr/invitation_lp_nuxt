@@ -5,7 +5,7 @@ class="text-center"
 >
 
     <div
-    class="text-h2 ma-10"
+    class="text-h2 mt-10 mb-2"
     >
         Service
         </div>

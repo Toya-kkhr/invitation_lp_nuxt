@@ -3,7 +3,7 @@
 class="text-center"
 >
     <div
-     class="text-h2 ma-10"
+     class="text-h2 mt-10"
     >
     Demo
     </div>
@@ -11,7 +11,7 @@ class="text-center"
         <v-col>
                 <v-sheet
                 height="auto"
-                class="rounded-xl pa-5"
+                class="rounded-xl pa-5 ma-2"
                 align='center'
                 >
 

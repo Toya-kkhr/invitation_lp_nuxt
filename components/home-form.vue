@@ -3,13 +3,13 @@
 class="text-center"
 >
     <div
-     class="text-h2 ma-10"
+     class="text-h2 mt-10"
     >
         Contact
         </div>
 
         <v-sheet
-            class="rounded-xl pa-6"
+            class="rounded-xl pa-6 ma-2"
             align="center"
             >
             <div
