@@ -16,3 +16,9 @@ class="pa-9"
     </h1>
 </v-parallax>
 </template>
+
+<script>
+export default {
+    name: "TopPage",
+}
+</script>

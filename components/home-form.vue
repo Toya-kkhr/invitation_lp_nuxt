@@ -34,23 +34,11 @@ class="text-center"
             <div
             class="pa-6"
             >
-                  <validation-observer
+  <validation-observer
     ref="observer"
     v-slot="{ invalid }"
+    name="contact" 
     >
-        <v-form 
-        name="contact"
-        method="post"
-        data-netlify-honeypot="botfield"
-        netlify
-        @click.prevent="submit"
-        >
-
-      <v-text-field
-        v-show="false"
-        v-model="title"
-        name="form-name"
-      />
 
     <validation-provider
     v-slot="{errors}"
@@ -86,7 +74,7 @@ class="text-center"
             rules="required"
         >
           <v-textarea
-            v-model="contents"
+            v-model="message"
             label="message"
             name="message"
             :error-messages="errors"
@@ -96,8 +84,21 @@ class="text-center"
             <v-text-field
           v-show="false"
           v-model="botfield"
+          name="bot-field"
           >
           </v-text-field>
+
+             <form
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            @click.prevent="submit"
+          >
+
+          <input type="hidden" name="form-name" value="contact">
+          <input v-model="name" type="hidden" name="name" />
+          <input v-model="email" type="hidden" name="email" />
+          <input v-model="message" type="hidden" name="message" />
 
           <div
           class="pa-4"
@@ -113,7 +114,7 @@ class="text-center"
             送信
           </v-btn>
           </div>
-    </v-form>
+            </form> 
     </validation-observer>
 
         </div>
@@ -128,17 +129,41 @@ class="text-center"
 export default {
     
     data() {
-       return {
-            title: "contact",
+        return {
+            contact: "contact",
             name: "",
             email: "",
             message: "",
-            botfield: ""
+            botfield: "",
+            isSubmit: false,
+            isSending: false,
         }
     },
     methods: {
         submit() {
+          if (this.isSending) {
+            return
+          }
 
+            const params = new URLSearchParams()
+            params.append('form-name', 'contact')
+            params.append('name', this.name)
+            params.append('email', this.email)
+            params.append('message', this.message)
+
+            if(this.botfield) {
+              params.append('bot-field', this.botfield)
+            }
+            
+              this.$axios.$post("/", params)
+            .then(() => {
+              this.$router.push('/success')
+            })
+            .catch( err => {
+              console.error("error", err)
+            })
+            .finally(() => {
+            })
         }
     }
 

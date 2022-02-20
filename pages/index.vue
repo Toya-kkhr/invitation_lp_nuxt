@@ -1,35 +1,29 @@
 <template>
 <div>
-<v-row
-align="center"
-justify="center"
->
-  <v-col
-  cols="12"
-  sm="9"
-  >
-<div>
+  <div>
+  <home-hero/>
+  </div>
+
+<v-container>
 <home-contents/>
-</div>
+</v-container>
 
-<div>
+<v-container>
 <home-function/>
-</div>
+</v-container>
 
-<div>
+<v-container>
 <home-flow/>
-</div>
+</v-container>
 
-<div>
+<v-container>
 <home-demo/>
-</div>
+</v-container>
 
-<div>
+<v-container>
 <home-form/>
-</div>
+</v-container>
 
-</v-col>
-</v-row>
 </div>
 </template>
 
